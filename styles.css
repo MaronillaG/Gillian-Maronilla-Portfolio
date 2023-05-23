@@ -35,9 +35,10 @@ p {
     font-family: sans-serif;
 
 }
-.nav-links  a {
+.nav-links a {
     text-decoration: none;
     padding: 0 10px;
+    color:black
 }
 
 .nav-links a:hover {
@@ -66,7 +67,7 @@ p {
 #projects h1{
     width: 100%;
     text-align: center;
-
+    
 }
 
 .projects-container {
@@ -90,7 +91,10 @@ p {
 }
 
 .img-icon {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
+    width: 150px;
+    height: 130px;
+    border-radius: 25%;
 }
+
+
+/* --------- Footer --------------- */
