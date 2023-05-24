@@ -6,56 +6,68 @@
     --highlight-1: #FEBEB0;
     --highlight-2: #3D5A5B;
     --dark: #2F365F;
+    --grey: #DCDCDC;
 
     /* fonts */
-    --head: sans-serif;
-    --default: tahoma;
+    --bold: 'Rubik Mono One', sans-serif;
+    --main-text: 'Nobile', sans-serif;
 }
 
+::selection{
+    background-color: var(--highlight-2);
+    color: var(--base);
+}
 *{
   margin: 0;
 }
 
 
 body {
-    font-family: var(--default);
+    font-family: var(--main-text);
     padding-top: 50px;
     background-color: var(--base);
 }
 
+section {
+    min-height: 100vh;
+}
+
 h1, h2, h3, h4, h5, h6 {
-    font-family: var(--head);
-    margin: 20px;
+    font-family: var(--bold);
+    margin: 50px 20px;
 }
 
 p {
     margin-bottom: 15px;
+    font-family: var(--main-text)
+    color: (var(--highlight-2))
 }
 /* --------- nav --------------------------------------------------- */
-
+#logo{
+    height: 35px;
+    margin-left: 100px;
+}
 #nav-bar {
     display: flex;
-    justify-content:flex-end;
-    margin-right: 25%;
     position: fixed;
     top: 0;
     width: 100%;
     background-color: var(--base);
-    padding: 20px 0;
-
+    padding: 20px 0;   
 }
 
 .nav-links {
     display: flex;
+    justify-content:flex-end;
     list-style: none;
-    font-family: sans-serif;
-    width: 25%;
-
+    font-family: var(--head);
+    width: 75%; 
 }
+
 .nav-links a {
     text-decoration: none;
     padding: 0 10px;
-    color:black
+    color: var(--dark);
 }
 
 .nav-links a:hover {
@@ -63,17 +75,18 @@ p {
 }
 
 .nav-btn{
-    background-color:var(--dark);
+    background-color:var(--highlight-2);
     color: var(--base);
-    border-radius: 10px;
+    border-radius: 35px;
     padding: 5px 20px;
+    font-family: var(--main-text);
 }
 
 
 /* --------- first section ------------------------------------------ */
 
 #welcome-section{
-
+    min-height: 75vh;
     padding: 150px;
     background: url("./Assets/welcome1.jpg") center/cover no-repeat;
 
@@ -93,9 +106,9 @@ p {
 }
 
 .projects-container {
-    min-height: 350px;
     width: 75%;
     margin: 0 auto;
+    margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -108,6 +121,7 @@ p {
     margin-bottom: 20px;
     padding: 10px;
 }
+
 .project-group img,
 .project-group p,
 .project-group button, {
@@ -115,10 +129,14 @@ p {
     padding: 50px;
 }
 
+#projects h2 {
+    margin-top: 120px;
+}
+
 .img-icon {
     width: 150px;
     height: 130px;
-    border-radius: 25%;
+    border-radius: 5%;
 }
 
 /* --------- About ------------------------------------------ */
@@ -164,7 +182,6 @@ p {
 
 /* --------- Contact ------------------------------------------ */
 #contact {
-    min-height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -185,6 +202,7 @@ p {
     background-color: var(--highlight-1);
     font-family: sans-serif;
     border-color: var(--highlight-1);
+    border-radius: 3px;
 }
 
 .contact-form textarea::placeholder,
@@ -208,6 +226,13 @@ p {
 .icon {
     height: 50px;
 }
+
+.btn:hover {
+    background: grey;
+    cursor: pointer;
+    transition: .3s background ease;
+}
+
 /* --------- Footer ------------------------------------------ */
 
 footer {
@@ -215,10 +240,9 @@ footer {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 50px 0;
     padding: 2rem 5rem;
     font-size: 0.7rem;
-    font
+
 }
 
 footer a,
@@ -227,4 +251,12 @@ footer p {
     color: var(--base);
     text-decoration: none;
     list-style: none;
+}
+
+#logo-footer{
+    height: 25px;
+}
+
+footer li{
+    padding: 3px;
 }

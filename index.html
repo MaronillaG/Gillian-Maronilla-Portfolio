@@ -6,47 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gillian Maronilla Portfolio</title>
     <link rel="stylesheet" href="./styles.css"/> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nobile&family=Rubik&family=Rubik+Mono+One&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <nav id="nav-bar">
+            <!-- <a href="#welcome-section"><img id="logo" src="./Assets/gM.png" class="my-logo" alt="gM-logo"></a>  -->
+            <a href="#welcome-section"><img id="logo" src="./Assets/gM.png" class="my-logo" alt="gM-logo"></a> 
             <ul class="nav-links">
                 <li><a href="#projects" class="nav-link">PROJECTS</a></li>
                 <li><a href="#about" class="nav-link">ABOUT</a></li>
+                <li><a href="#contact" class="nav-link">CONTACT</a></li>
             </ul>
     </header>
 
     <section id="welcome-section" class="welcome-items">
         <h1 id="intro-title">Hello, I'm Gillian.</h1>
         <p>front-end developer</p>
-        <button class="nav-btn">See work</button>
+        <a href="#projects" ><button class="nav-btn btn">See work</button></a>
     </section>
 
     <section id="projects" class="projects-container">
-        <h2 class="section-heading">Selected Work.</h2>
+        <h2 class="section-heading">Projects</h2>
         <div class="project-group">
-            <a href="" class="project-tile" > 
-                <img src="./Assets/img-placeholder.png" alt="icon-project1" class="img-icon">
-            </a>
-            <h3 class="project-title"> Title </h3>
+            <img src="./Assets/img-placeholder.png" alt="icon-project1" class="img-icon">
+            <h3 class="project-title"> Hobby Page </h3>
             <p>Lorem pisum Lorem pisum Lorem pisum Lorem pisum</p>
-            <button class="nav-btn">View project</button>
+            <button class="nav-btn btn">View project</button>
         </div>
         <div class="project-group">
-            <a href="" class="project-tile" > 
-                <img src="./Assets/img-placeholder.png" alt="icon-project2" class="img-icon">
-            </a>
-                <h3 class="project-title"> Title </h3>
-                <p>Lorem pisum Lorem pisum Lorem pisum Lorem pisum</p>
-                <button class="nav-btn">View project</button>
+            <img src="./Assets/img-placeholder.png" alt="icon-project2" class="img-icon">
+            <h3 class="project-title">Language Learning Game </h3>
+            <p>Lorem pisum Lorem pisum Lorem pisum Lorem pisum</p>
+            <button class="nav-btn btn">View project</button>
         </div>
         <div class="project-group">
-            <a href="" class="project-tile" > 
-                <img  src="./Assets/img-placeholder.png" alt="icon-project3" class="img-icon">
-            </a>
-            <h3 class="project-title"> Title </h3>
+            <img  src="./Assets/img-placeholder.png" alt="icon-project3" class="img-icon">
+            <h3 class="project-title"> Snake Game </h3>
             <p>Lorem pisum Lorem pisum Lorem pisum Lorem pisum</p>
-            <button class="nav-btn">View project</button>
+            <button class="nav-btn btn">View project</button>
         </div>
     </section>
 
@@ -54,9 +54,11 @@
         <div id="left-half">
             <h2 id="about-heading" class="section-heading">What I'm all <span class="highlight">about.</span></h2>
             <p> 
-             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt porro nam accusantium temporibus a quo, qui, ducimus maxime cupiditate amet et officia consequuntur quae in! Veritatis totam pariatur sequi iusto.   
+                I am a self taught web developer. 
+                I'm from London and I love to go on long cycles.
+                I follow my curiosities and passionately pursue them. 
              </p>
-            <button class="nav-btn"> Learn More About Me.</button>
+            <a href="./Assets/about-me.html" ><button class="nav-btn"> Learn More About Me.</button></a>
         </div>
         <div id="right-half">
             <img src="./Assets/img-placeholder.png">
@@ -67,9 +69,9 @@
     <section id="contact">
         <h2 class="section-heading" id="contact-heading">Start a conversation with me.</h2>
         <form action="" method="post" class="contact-form">
-            <textarea class="message-box" id="message" placeholder="Type your message here." rows="6" cols="30"></textarea>
-            <input id="email" type="email" required placeholder="Enter your email address."> 
-            <input id="submit" type="submit" value="Send" class="nav-btn">
+            <textarea class="input" id="message" placeholder="Type your message here." rows="6" cols="30"></textarea>
+            <input class="input" id="email" type="email" required placeholder="Enter your email address."> 
+            <input id="submit" type="submit" value="Send" class="nav-btn btn">
         </form>
         <p class="contact-text"> Alternatively, feel free to connect with me via these social channels, I'm excited to hear from you.<br>Or email me directly at <span class="my-email">MaronillaG@gmail.com</span></p>
         <div class="icons">
@@ -81,10 +83,11 @@
 
 
     <footer>
-        <img id="logo" src="">
+        <img id="logo-footer" class="my-logo" src="./Assets/gM.png">
         <ul>
             <li><a href="#about">About</li></a>
             <li><a href="#projects">Projects</li></a>
+            <li><a href="#Contact">Get in touch</li></a>
         </ul>
         <ul>
             <a href="https://www.linkedin.com/in/gmaronilla/"><li>LinkedIn</li></a>
@@ -94,7 +97,7 @@
         </ul>
         <ul>
             <li>Made by me :)</li>
-            <a href=""><li>Credits</li></a>
+            <a href="./credits.html"><li>Credits</li></a>
             <li>Thanks for visiting!</li>
         </ul>
         
