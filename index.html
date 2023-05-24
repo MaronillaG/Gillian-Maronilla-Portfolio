@@ -11,18 +11,18 @@
     <header>
         <nav id="nav-bar">
             <ul class="nav-links">
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">PROJECTS</a></li>
+                <li><a href="#about" class="nav-link">ABOUT</a></li>
             </ul>
     </header>
 
-    <section id="welcome-section">
-        <h1 id="intro-title" >Hello, I'm Gillian.</h1>
+    <section id="welcome-section" class="welcome-items">
+        <h1 id="intro-title">Hello, I'm Gillian.</h1>
         <p>front-end developer</p>
         <button class="nav-btn">See work</button>
     </section>
 
-    <section id="#projects" class="projects-container">
+    <section id="projects" class="projects-container">
         <h2 class="section-heading">Selected Work.</h2>
         <div class="project-group">
             <a href="" class="project-tile" > 
@@ -36,9 +36,9 @@
             <a href="" class="project-tile" > 
                 <img src="./Assets/img-placeholder.png" alt="icon-project2" class="img-icon">
             </a>
-            <h3 class="project-title"> Title </h3>
-            <p>Lorem pisum Lorem pisum Lorem pisum Lorem pisum</p>
-            <button class="nav-btn">View project</button>
+                <h3 class="project-title"> Title </h3>
+                <p>Lorem pisum Lorem pisum Lorem pisum Lorem pisum</p>
+                <button class="nav-btn">View project</button>
         </div>
         <div class="project-group">
             <a href="" class="project-tile" > 
@@ -53,7 +53,9 @@
     <section id="about">   
         <div id="left-half">
             <h2 id="about-heading" class="section-heading">What I'm all <span class="highlight">about.</span></h2>
-            <p> Lorem Ipsum -- Lorem Ipsum -- Lorem Ipsum -- Lorem Ipsum -- Lorem Ipsum -- </p>
+            <p> 
+             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt porro nam accusantium temporibus a quo, qui, ducimus maxime cupiditate amet et officia consequuntur quae in! Veritatis totam pariatur sequi iusto.   
+             </p>
             <button class="nav-btn"> Learn More About Me.</button>
         </div>
         <div id="right-half">
@@ -64,32 +66,38 @@
 
     <section id="contact">
         <h2 class="section-heading" id="contact-heading">Start a conversation with me.</h2>
-        <form action="" method="post">
-            <input id="email" type="email" required placeholder="Enter your email address"> 
-            <textarea id="message" placeholder="Type your message here." rows="6" cols="30"></textarea>
-            <input id="submit" type="submit" value="Send">
+        <form action="" method="post" class="contact-form">
+            <textarea class="message-box" id="message" placeholder="Type your message here." rows="6" cols="30"></textarea>
+            <input id="email" type="email" required placeholder="Enter your email address."> 
+            <input id="submit" type="submit" value="Send" class="nav-btn">
         </form>
-        <p> I am an active member (on some) of these social channels. Feel free to connect with me, I'm excited to hear from you. Alternatively you can catch me on MaronillaG@gmail.com</p>
+        <p class="contact-text"> Alternatively, feel free to connect with me via these social channels, I'm excited to hear from you.<br>Or email me directly at <span class="my-email">MaronillaG@gmail.com</span></p>
         <div class="icons">
-            <img src="./Assets/img-placeholder.png" class="icons">
-            <img src="./Assets/img-placeholder.png" class="icons">
-            <img src="./Assets/img-placeholder.png" class="icons">
-         </div>
-
+            <a href="https://github.com/MaronillaG"><img src="./Assets/github.png" class="icon github"></a>
+            <a href="https://www.linkedin.com/in/gmaronilla/"><img src="./Assets/linkedin.png" class="icon LinkedIn"></a>
+            <a href="https://www.instagram.com/holgtastic/"><img src="./Assets/instagram.png" class="icon instagram"></a>
+        </div>
     </section>
+
+
     <footer>
         <img id="logo" src="">
         <ul>
-            <a href="#about"><li>About</li></a>
-            <a href="#projects"><li>Projects</li></a>
+            <li><a href="#about">About</li></a>
+            <li><a href="#projects">Projects</li></a>
         </ul>
         <ul>
-            <a href=""><li>LinkedIn</li></a>
-            <a href=""><li>GitHub</li></a>
-            <a href=""><li>Instagram</li></a>
-            <a href=""><li>MaronillaG@gmail.com</li></a>
+            <a href="https://www.linkedin.com/in/gmaronilla/"><li>LinkedIn</li></a>
+            <a href="https://github.com/MaronillaG"><li>GitHub</li></a>
+            <a href="https://www.instagram.com/holgtastic/"><li>Instagram</li></a>
+            <li>MaronillaG@gmail.com</li>
         </ul>
-        <p>Made by me :) <br>Thanks for visiting!</p>
+        <ul>
+            <li>Made by me :)</li>
+            <a href=""><li>Credits</li></a>
+            <li>Thanks for visiting!</li>
+        </ul>
+        
     </footer>
 
     <!-- <script src="scripts.js"></script> -->
