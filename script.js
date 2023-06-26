@@ -27,7 +27,7 @@ close.addEventListener('click', function() {
 });
 
 document.addEventListener('keydown', function(e) {
-    if (e.key === 'escape') {
+    if (e.key === 'Escape') {
         screen.classList.toggle('reveal');
         toggle.classList.toggle('expand');
         navLinks.forEach(element => {
@@ -50,3 +50,16 @@ navLinks.forEach ( link => {
     console.log('link clicked')
 });
 
+const observer = new IntersectionObserver((items) => {
+    items.forEach((item) => {
+        console.log(item)
+        if (item.isIntersecting) {
+            item.target.classList.add('show');
+        } else {
+            item.target.classList.remove('show');
+        }
+    });
+});
+
+const hiddenSections = document.querySelectorAll('.section-hidden');
+hiddenSections.forEach((section) => observer.observe(section));
