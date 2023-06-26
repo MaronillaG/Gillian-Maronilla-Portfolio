@@ -1,0 +1,268 @@
+:root {
+    --main-text: 'Nobile', sans-serif;
+    --light: white;
+    --dark: black;
+    --lowlight: grey;
+    --highlight: rgb(14, 15, 32);
+    font-size: 16px;
+} 
+
+* {
+    font-family: var(--main-text)
+}
+
+header {
+    position: relative;
+}
+
+/* Menu toggle to reveal nav links */
+#toggle, #close {
+    position: absolute;
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    color: var(--dark);
+    font-size: 1.2rem;
+    text-align: center;
+    cursor: pointer;
+    padding: 0.3rem;
+    z-index: 2;
+    transition: padding-top 500ms ease;
+    transition: color 1200ms ease;
+}
+
+#toggle.expand {
+    padding-top: 2em;
+    padding-bottom: 0.3rem;
+    color: var(--lowlight);
+}
+
+#toggle::before, #toggle::after {
+    content:"";
+    position:absolute;
+    width: 100%;
+    height: 2px;
+    left: 0; 
+    background-color: var(--lowlight);
+}
+#toggle::before{
+    top: -0.1rem;
+}
+#toggle::after{
+    top: 100%;
+}
+#close {
+    opacity:0;
+    transition: opacity 50ms forwards;
+    margin-top: 2px;
+}
+
+#close.reveal{
+    z-index: 2;
+    opacity: 1;
+    color: var(--light);
+}
+
+#screen, #menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: var(--highlight);
+    height: 0;
+    transition: height 800ms ease;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+
+}
+
+#screen.reveal {
+    height:100svh;
+}
+
+li {
+    list-style-type: none;
+    margin: 1rem;
+    /* background-color: pink; */
+    transform: translateY(-1200px);
+    
+}
+
+a:hover {
+   cursor: pointer;
+}
+ 
+.nav {
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: var(--light);
+}
+
+@keyframes lower {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.nav-link.reveal {
+    opacity: 1;
+    animation: lower 800ms forwards ease;
+}
+
+
+/* -------------------- hero section -------------- */
+@media (max-width: 600px) {
+    body{
+        width: 80%;
+    }
+    #container {
+        display: list-item;
+        max-width: 60%;
+        height: auto;
+        z-index: -10;
+        padding-top: 25%;
+    }
+    .name {
+        font-size: 3rem;
+        height: auto;
+    }
+
+    .projects-container .card {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .projects-container .card > * {
+        flex: 1;
+    }
+}
+
+.animate-name{
+    /* background-color: aqua; */
+    height: 100svh;
+    padding-top: 7%;
+    text-align: center;
+    z-index: -10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.animate-name .wrapper .item {
+    height: 500px;
+    z-index: 1;
+}
+
+.wrapper{
+    overflow: hidden;
+
+}
+.animate-name span:nth-child(1){
+    transform: translate(-55%, 150%);
+    animation: fill 1s 1.9s forwards;
+}
+
+@keyframes fill {
+    to {
+        color: rgba(0,0,0,1);
+    }
+}
+.overlay {
+    position: absolute;
+    inset: 0;
+    background-color: #fff;
+    z-index: 10;
+    transform: translateX(0%);
+    animation: overlay-slide 2s forwards;
+}
+@keyframes overlay-slide {
+    to { 
+        transform: translateX(101%);
+   }
+}
+
+.animate-name span:nth-child(2) {
+    z-index: 0;
+    transform: translateX(0%);
+    scale: 0;
+    animation: img-slide 350ms linear forwards, scale 1s 1.6s forwards ease;
+}
+.animate-name span:nth-child(3) {
+    z-index: 0;
+    transform: translateX(5%);
+}
+
+@keyframes img-slide{
+    to {
+        transform: translateX(50%);
+    }
+}
+
+@keyframes scale {
+    to {
+        scale: 1;
+    }
+}
+.name{
+    font-family: 'Rubik Mono One', sans-serif;
+    color: rgba(0,0,0,0);
+    -webkit-text-stroke: 1px rgba(0,0,0,1);
+    text-stroke: 1px rgba(0,0,0,1);
+    font-size: 5rem;
+    z-index: -9;
+    height: 250px;
+}
+
+
+#face {
+height:200px;
+width: 200px;
+}
+
+/* ------------ projects section  ------------- */
+section {
+    height: 100svh;
+    background-color:yellow;
+}
+.projects-container {
+    width: 80%;
+    margin: 0 auto;
+    /* margin-top: 10px; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1em;
+    /* flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    padding-bottom: 50px; */
+}
+.card {
+    margin: 10%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.img-icon {
+    width: 300px;
+    height: 300px;
+    
+}
+
+h2 {
+    position: absolute;
+    left: 40%;
+}
+/* ------------ connect section  ------------- */
+
+.icon {
+    height: 30px;
+    width: 30pxl
+}

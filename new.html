@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gillian's Portfolio</title>
+    <link rel="stylesheet" href="styles2.css"></style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nobile&family=Rubik&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+    <script defer src="animations.js"></script>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <div id="toggle" class="toggle-menu">Menu</div>
+            <div id="close" class="close-menu">Close</div>
+            <div id="screen" class="toggle">
+               <ul id="menu-container">
+                   <li class="nav-link"><a href="#about"class="nav" > About me</a></li>
+                   <li class="nav-link"><a href="#work" class="nav">Projects</a></li>
+                   <li class="nav-link"><a href="#connect" class="nav">Connect</a></li>
+                   <li class="nav-link"><a href="#welcome"class="nav" >Home</a></li>
+                </ul> 
+            </div>
+        </div>
+    </header>
+    <!-- <p id='portfolio-text' class="portfolio welcome">Portfolio 2023</p> -->
+    <div id="welcome" class="animate-name">
+        <span class="wrapper">
+            <span class="item name">Gillian</span>
+            <div class="overlay"></div>
+        </span>
+        <span class="wrapper">
+            <img src="./Assets/face.png" alt="" id="face" class="item face">
+        </span>
+        <span class="wrapper">
+            <span class="item name">Maronilla</span>
+            <div class="overlay"></div>
+        </span>
+    </div>
+
+    <section id="work" >
+        <h2 class="section-heading">Projects</h2>
+        <div class="projects-container">
+            <div class="card">
+                <img src="./Assets/img-placeholder.png" alt="icon-project1" class="img-icon">
+                <h3 class="project-title"> Hobby Page </h3>
+                <p>Lorem pisum Lorem pisum Lorem pisum Lorem pisum</p>
+                <button class="nav-btn btn">View project</button>
+            </div>
+            <div class="card">
+                <img src="./Assets/img-placeholder.png" alt="icon-project2" class="img-icon">
+                <h3 class="project-title">Language Learning Game </h3>
+                <p>Lorem pisum Lorem pisum Lorem pisum Lorem pisum</p>
+                <button class="nav-btn btn">View project</button>
+            </div>
+            <div class="card">
+                <img  src="./Assets/Snake.png" alt="icon-project3" class="img-icon">
+                <h3 class="project-title"> Snake Game </h3>
+                <p> Classic Snake game built with CSS grid. </p>
+                <a href="https://maronillag.github.io/Snake/"><button class="nav-btn btn">View project</button></a>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="contact">
+        <h2 class="section-heading" id="contact-heading">Start a conversation with me.</h2>
+        <form action="https://formspree.io/f/mlekqnre" method="POST" class="contact-form">
+            <textarea class="input" id="message" name="message" placeholder="Type your message here." rows="6" cols="30"></textarea>
+            <input class="input" id="email" type="email" name="email" required placeholder="Enter your email address."> 
+            <input id="submit" type="submit" value="Send" class="nav-btn btn">
+        </form>
+        <p class="contact-text"> Alternatively, feel free to connect with me via these social channels, I'm excited to hear from you.<br>Or email me directly at <span class="my-email">MaronillaG@gmail.com</span></p>
+        <div class="icons">
+            <a href="https://github.com/MaronillaG"><img src="./Assets/github.png" class="icon github"></a>
+            <a href="https://www.linkedin.com/in/gmaronilla/"><img src="./Assets/linkedin.png" class="icon LinkedIn"></a>
+            <a href="https://www.freecodecamp.org/MaronillaG"><img src="./Assets/fcc.png" class="icon fcc"></a>
+            <a href="https://www.codewars.com/users/MaronillaG/"><img src="./Assets/codewars.png" class="icon codewars"></a>
+            <a href="https://www.instagram.com/holgtastic/"><img src="./Assets/instagram.png" class="icon instagram"></a>
+        </div>
+    </section>
+
+</body>
+</html>
