@@ -1,5 +1,6 @@
 const toggle = document.querySelector('#toggle');
 const screen = document.querySelector('#screen');
+const menu = document.querySelector('#menu-container');
 const navLinks = document.querySelectorAll('.nav-link');
 const close = document.querySelector('#close');
 
@@ -9,9 +10,7 @@ const close = document.querySelector('#close');
 toggle.addEventListener('click', function() {
     screen.classList.toggle('reveal');
     toggle.classList.toggle('expand');
-    navLinks.forEach(element => {
-        element.classList.toggle('reveal')
-    });
+    menu.classList.toggle('reveal');
     close.classList.toggle('reveal');
     console.log('menu clicked');
 })
@@ -19,9 +18,7 @@ toggle.addEventListener('click', function() {
 close.addEventListener('click', function() {
     screen.classList.toggle('reveal');
     toggle.classList.toggle('expand');
-    navLinks.forEach(element => {
-        element.classList.toggle('reveal')
-    });
+    menu.classList.toggle('reveal');
     close.classList.toggle('reveal');
     console.log('close clicked');
 });
@@ -42,9 +39,7 @@ navLinks.forEach ( link => {
     link.addEventListener('click', function() {
         screen.classList.toggle('reveal');
         toggle.classList.toggle('expand');
-        navLinks.forEach(element => {
-            element.classList.toggle('reveal')
-        });
+        menu.classList.toggle('reveal');
         close.classList.toggle('reveal');
     });
     console.log('link clicked')
