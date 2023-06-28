@@ -233,9 +233,6 @@ width: 200px;
     opacity: 1;
 }
 
-section {
-    /* height: 100svh; */
-}
 
 .section-heading {
     height: 30px;
@@ -285,23 +282,27 @@ section {
 
 /* ------------ about me section  ------------- */
 .about-container {
-    height: 80%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: center;
 }
 
 .about-text {
-    margin-top:15%;
-    width: 60%;
-    border: 1px solid red;
+    margin-top:10%;
+    width: 40%;
+    /* border: 1px solid red; */
 }
 
 .about-img{
-    margin-top:15%;
-    border: 1px solid red;
-
+    margin:10% 0;
+    width: 30%;
+    /* border: 1px solid red; */
+}
+.icons{
+    display: flex;
+    gap: 2em;
+    margin-left: 25%;
+    /* justify-content: center; */
 }
 /* ------------ connect section  ------------- */
 
@@ -343,27 +344,36 @@ textarea::placeholder, #email::placeholder{
 .submit {
     padding: 0.35rem 0.7rem;
 }
-.icons{
-    margin-top: 2rem;
-    display: flex;
-    gap: 2em;
-}
+
 .icon {
     height: 30px;
     width: 30px;
 }
 
-.my-email {
-    text-decoration: underline dotted var(--highlight);
-}
 
-.copy {
+.email {
     height: 1.2rem;
     width: auto;
+}
+.copy {
+    filter: invert(100%);
 }
 
 .copy:hover{
     cursor: pointer;
+}
+
+.copy.hide {
+    display: none;
+}
+
+.tick, .copy-message {
+    display: none;
+    color: var(--lowlight);
+    filter: invert(100%);
+}
+.tick.reveal, .copy-message.reveal {
+    display: inline;
 }
 /* ------------ footer  ------------- */
 footer{
@@ -409,6 +419,9 @@ footer{
     .about-container img{
         display: none;
     }
+    .about-text { 
+        width: 75%;
+    };
 
     .form-container {
         width: 80%;
