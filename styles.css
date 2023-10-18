@@ -28,8 +28,10 @@ body {
 
 header {
     grid-area: header;
-    background-color: pink;
-    /* position: relative; */
+    /* position: absolute; */
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
 }
 #hero {
     grid-area: hero;
@@ -41,30 +43,37 @@ footer {
     grid-area: footer;
 }
 
+
+/* ----------------- NAV BAR ----------------- */
 #logo {
-    font-family: ;
+    border-radius: 5px;
 }
 
-/* ----------------- Menu toggle to reveal nav links ----------------- */
+/* clicking on 'MENU" trigers a hamburger motion. Menu shifts down to reveal "CLOSE".
+Also the "MENU" and "CLOSE" change color to highlight what is active.
+A line above and below the nav toggle is styled here also. */
+
+/* MENU & CLOSE Buttons */
+#toggle, #close {
+    right: 2em;
+}
+
 #toggle, #close {
     position: absolute;
     position: fixed;
     top: 2rem;
-    right: 5em;
     color: var(--dark);
     font-size: 2rem;
     text-align: center;
     cursor: pointer;
-    padding: 0.3rem;
     z-index: 998;
-    transition: padding-top 500ms ease;
-    transition: color 1200ms ease;
+    transition: padding-top 600ms ease-in-out;
+    transition: color 800ms ease-in;
 }
 
 #toggle.expand {
-    padding-top: 2em;
-    padding-bottom: 0.3rem;
-    color: var(--lowlight);
+    padding-top: 1.5em; /* "menu" shifts down */
+    color: var(--lowlight); /*  "menu" changes to grey as the menu is in expand position*/
 }
 
 #toggle::before, #toggle::after {
@@ -83,34 +92,29 @@ footer {
 }
 #close {
     opacity:0;
-    transition: opacity 50ms forwards;
-    margin-top: 2px;
-    /* border: 1px solid pink; */
+    transition: opacity 500ms forwards;
 }
 
 #close.reveal{
     z-index: 2;
     opacity: 1;
     color: var(--light);
+    background-color: var(--highlight);
 }
 #screen {
     position: fixed;
-    /* width: 80%; */
+    width: 100%;
 }
-#screen, #menu-container {
-    top: 7em;
-    right: 5em;
+ #menu-container {
     z-index: 1;
-    height: 0;
-    transition: height 600ms ease;
-    display: flex;
-    flex-direction: column;
-    align-items:center;
-    
+    transition: height 900ms ease; 
+    text-align: right;    
 }
 
 #menu-container {
-    background-color: var(--highlight);
+    /* background-color: pink; */
+    transform: translateY(-220%); /* shifts the menu downwards into view*/
+    width: 100%;
 }
 
 #screen.reveal {
@@ -119,18 +123,18 @@ footer {
 
 li {
     list-style-type: none;
-    margin: 1rem;
+    margin: 0.2em;
+    color: var(--dark);
+    width: 90%;
+    /* background-color: var(--highlight); */
+}
+
+li:hover{
+    background-color: var(--highlight);
     color: var(--light);
 }
-
-#menu-container {
-    transform: translateY(-220%);
-    height: fit-content;
-    width: 97%;
-}
-
 a {
-    color: var(--light);
+    color: var(--dark);
     text-decoration: none;
 }
 
@@ -274,7 +278,6 @@ width: 200px;
 /* -------------------------------- MAIN   --------------------------------- */
 /* ------------ PROJECTS section   ------------- */
 .projects-container {
-    width: 80%;
     margin: 0 auto;
     display: grid;
     grid-template-rows: 15em 15em;
@@ -290,7 +293,6 @@ width: 200px;
     min-height: 5em;
     border-radius: 3px;
 }
-
 
 
 /* ------------ ABOUT section  ------------- */
