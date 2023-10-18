@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nobile&family=Rubik&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script defer src="script.js"></script>
 </head>
 <body>
@@ -85,52 +86,73 @@
         <section id="about" class="section-hidden">
             <h2 class="section-heading">Get To Know Me.</h2>
             <div class="about-container">
-                <p class="about-text"> Hi I'm Gillian. I'm from London and last year I decided to take a break from Accounting to travel and explore my interest in technology. After 7 years I wanted a different challenge and participated in a 4 week computer science 'bootcamp' in Amsterdam where my focus was on learning C. Starting from scratch I was certainly thrown in the deep end! I learned how to use a terminal, git and fundamental programming concepts. That experience gave me the confidence in my self-learning process and gave me an appreciation of learning from others who were new to programming too. Through peer-to-peer evaluations I became more confident talking about my code and reviewing other's work. <br>
-                    <br> I'm naturally curious about most things and enjoy learning new skills. Since January 2023 I  have been teaching myself frontend fundamentals: HTML, CSS and JavaScript. Why front end? I really enjoyed being able to see what I was building as I was building it! I also like the fact that learning Javascript gives me the freedom to build games as well as other online applications.   <br>
-                    <br> I aspire to be a Full Stack web developer and I am committed to learn along the way in my free time. It is important to me that I continue to develop the fundamental skills to be a proficient developer. I am excited to start working with others on projects that make a tangible impact. <br>
-                    <br> Learning software development for me has felt like gaining super powers. It gives me a lot of energy to be able to create in digital form, whether its a game or an online application, this is something that I realised I had been missing in my life and I am committed to developing my skills.<br>
-                <ul class="me">
-                    <li class=""></li>
-                </ul>
-                <img src="./Assets/me.jpg" alt="photo of Gill" class="about-img">
-            </div>
-            <div class="icons">
-                <a href="https://github.com/MaronillaG"><img src="./Assets/github.png" class="icon github"></a>
-                <a href="https://www.codewars.com/users/MaronillaG/"><img src="./Assets/codewars.png" class="icon codewars"></a>
-                <a href="https://www.freecodecamp.org/MaronillaG"><img src="./Assets/fcc.png" class="icon fcc"></a>
+                <p class="about-text"> I am a web developer with a strong  background in Accounting and Finance based in The Netherlands.<br>
+                    <br> I entered the tech world out of curiosity and immediately developed a passion for coding. <br> 
+                    <br> Being able to create visually appealing and engaging user experiences truly has felt like gaining super powers. 
+                </p>
+                <div class="skills-container">
+                    <div>
+                        <ul class="skills"> Languages
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                 </div>
+                    <div>
+                        <ul class="skills"> Tools
+                            <li>Git | Github</li>
+                            <li>Figma | Canva </li>
+                            <li>Terminal | VS Code</li>
+                        </ul>
+                    </div>
+                    
+                    
+                </div>
+            
             </div>
         </section>
 
         <section id="contact" class="section-hidden">
-            <h2 class="section-heading" id="contact-heading">Start a conversation with me.</h2>
-            <div class="contact-container">
-                    <form action="https://formspree.io/f/mlekqnre" method="POST" class="contact-form form-container">
-                        <textarea class="input msg" id="message" name="message" placeholder="Happy to hear feedback on my portfolio." rows="6" cols="30"></textarea>
-                        <input class="input email" id="email" type="email" name="email" required placeholder="Your email address."> 
-                        <input id="submit" type="submit" value="Send" class="submit btn">
-                    </form>
+            <h2 class="section-heading" id="contact-heading">Contact</h2>
+            <p>Happy that you’re here!<br>Let’s grab a coffee if you’re in Rotterdam - </p>
+            <div>
+                <p> coffee on me </p>
+                <i class="fas fa-coffee"></i>
+            </div>
+
+            <div class="socials">
+                <a href="https://github.com/MaronillaG"><i class="fa-brands fa-github"></i></a>
+                <a href="https://linkedin.com/in/gmaronilla"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+
+            <div class="form-container">
+                <form action="https://formspree.io/f/mlekqnre" method="POST" class="contact-form form-container">
+                    <input class="input full-name" id="full-name" type="name" name="full-name" required placeholder="What should I call you?"> 
+                    <input class="input email" id="email" type="email" name="email" required placeholder="Your contact email address."> 
+                    <textarea class="input msg" id="message" name="message" placeholder="Your message or project idea." rows="6" cols="30"></textarea>
+                    <input id="submit" type="submit" value="Send" class="submit btn">
+                </form>
             </div>
         </section>
     </main>
 
     <footer>
-        <ul>
+        <!-- <ul>
             <li><a href="#about">About Me</li></a>
             <li><a href="#work">Projects</li></a>
             <li><a href="#welcome">Home</li></a>
-        </ul>
-        <ul>
-        </ul>
-        <ul>
-            <li> I am proud to say this website is of my own making.</li>
-            <li><a href="https://github.com/MaronillaG/Gillian-Maronilla-Portfolio"> > Link to the Github repo for this site <</a></li>
-            <li>
-                <span id="my-email" class="my-email">MaronillaG@gmail.com </span>
-                <span><img id="copy" class="icon email copy" src="./Assets/copy.png" alt="copy icon"></span>
-                <span><img id="copied" class="icon email tick" src="./Assets/checked.png" alt="successful action"></span>
+        </ul> -->
+
+        
+        <div class="icons">
+            <a href="https://github.com/MaronillaG"><i class="fa-brands fa-github"></i></a>
+            <a href="https://linkedin.com/in/gmaronilla"><i class="fa-brands fa-linkedin-in" id="copy" class="icon email copy"></i></a>
+            <a href="https://linkedin.com/in/gmaronilla"><i class="fa fa-envelope" ></i></a>
+            <i class="fa-solid fa-check" id="copied" class="icon email tick"></i>
                 <span id="copy-message" class="copy-message">Email address copied successfully.</span>
-            </li>
-        </ul>
+            <!-- <a href="https://www.codewars.com/users/MaronillaG/"> <img src="./Assets/codewars.png" class="icon codewars"></a> -->
+            <!-- <a href="https://www.freecodecamp.org/MaronillaG"><i class="fa-brands fa-free-code-camp"></i></a> -->
+        </div>
     </footer>
 </body>
 </html>

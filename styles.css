@@ -9,26 +9,24 @@
 } 
 
 * {
-    font-family: var(--body-text)
-}
-
-header {
-    position: relative;
+    font-family: var(--body-text);
+    margin: 0;
 }
 
 body {
     display:grid;
-    grid-template-rows: 5em 90vh auto 10em;
+    grid-template-rows: 5em 100vh auto 10em;
     grid-template-columns: 1fr 6fr 1fr;
     grid-template-areas: "header header header"
-        "hero hero hero"
-        ". main ."
-        "footer footer footer";
+    "hero hero hero"
+    ". main ."
+    "footer footer footer";
 }
 
 header {
     grid-area: header;
     background-color: pink;
+    position: relative;
 }
 #hero {
     grid-area: hero;
@@ -90,7 +88,6 @@ footer {
 }
 #screen {
     position: fixed;
-
 }
 #screen, #menu-container {
     top: 0;
@@ -125,8 +122,8 @@ li {
 a {
     color: var(--light);
     text-decoration: none;
-
 }
+
 a:hover {
    cursor: pointer;
 }
@@ -175,11 +172,6 @@ a:hover {
     align-items: center;
     justify-content: center;
 }
-
-/* .animate-name .wrapper .item {
-    height: 500px;
-    z-index: 1;
-} */
 
 .wrapper{
     overflow: hidden;
@@ -258,7 +250,6 @@ width: 200px;
     opacity: 1;
 }
 
-
 .section-heading {
     height: 30px;
     width: 100%;
@@ -270,84 +261,45 @@ width: 200px;
 }
 
 
-/* ------------ MAIN   ------------- */
+/* -------------------------------- MAIN   --------------------------------- */
+/* ------------ PROJECTS section   ------------- */
 .projects-container {
     width: 80%;
     margin: 0 auto;
     display: grid;
-    grid-template-rows: 20em 20em;
+    grid-template-rows: 15em 15em;
     grid-template-columns: 2fr 2fr;
     gap: 0.8em;
 
 }
-.card {
-    margin: 10%;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-}
+
 .img-icon {
-    width: 300px;
-    height: 300px;
-    border-radius: 5%;
-}
-
-.btn {
-    border-radius: 25px;
-    padding: 0.3rem 0.5rem;
-    color: var(--light);
-    background-color: var(--lowlight);
-    box-shadow: 2px 2px 5px var(--dark);
-    font-family: var(--main-text);
-}
-
-.btn:hover{
-    cursor: pointer;
-}
-
-.project-title {
-    font-weight: bold;
-}
-
-.projects-container p {
-    min-height: 80px;
+    max-width: 20em;
+    max-height: 15em;
+    min-width: 8em;
+    min-height: 5em;
+    border-radius: 3px;
 }
 
 
-/* ------------ about me section  ------------- */
+
+/* ------------ ABOUT section  ------------- */
 .about-container {
-    /* border: 1px solid blue; */
-    display: flex;
-    justify-content: center;
+    background-color: orange;
 }
 
-.about-text {
-    margin-top:10%;
-    width: 40%;
-    /* border: 1px solid red; */
+.skills-container{
+    display: grid;
+    grid-template-rows: 5em 5em;
+    grid-template-columns: 2fr 2fr;
+    gap: 0.8em;
+    background-color: yellow;
 }
+.skills li {
+    color: pink;
+}
+/* ------------ CONTACT section  ------------- */
 
-.about-img{
-    margin:10% 0;
-    width: 30%;
-    /* border: 1px solid red; */
-}
-.icons{
-    display: flex;
-    gap: 2em;
-    margin-left: 25%;
-
-    /* justify-content: center; */
-}
-/* ------------ connect section  ------------- */
-
-.contact-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10%;
-}
 .form-container {
     display: flex;
     flex-direction: column;
@@ -366,7 +318,7 @@ textarea::placeholder, #email::placeholder{
 .input{
     width: 100%;
     margin-bottom: 10px;
-    border-radius: 15px;
+    border-radius: 4px;
 }
 
 
@@ -382,8 +334,8 @@ textarea::placeholder, #email::placeholder{
 }
 
 .icon {
-    height: 30px;
-    width: 30px;
+    height: 2em;
+    width: 2em;
 }
 
 
