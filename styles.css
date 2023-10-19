@@ -1,8 +1,8 @@
 :root {
     --body-text: -apple-system, BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-    --header-text: 'Rubik Mono One', sans-serif;
+    --header-text: "Recursive", sans-serif;
     --light: white;
-    --dark: black;
+    --dark: #3B2C27;
     --lowlight: grey;
     --highlight: rgb(14, 15, 32);
     font-size: 16px;
@@ -11,33 +11,56 @@
 * {
     font-family: var(--body-text);
     margin: 0;
-    padding: 0;
+}
+
+html {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+
 }
 
 body {
     display:grid;
-    grid-template-rows: 10em 100vh auto 10em;
-    grid-template-columns: 1fr 6fr 1fr;
-    grid-template-areas: "header header header"
-    "hero hero hero"
-    ". main ."
-    "footer footer footer";
-    /* width: 80%; */
+    grid-template-rows: 5em 100vh auto 10em;
+    grid-template-columns: 2fr 10fr 2fr;
+    grid-template-areas: 
+        "header header header"
+        "hero hero hero"
+        ". main ."
+        "footer footer footer";
+    max-width: 80%;
     grid-gap: 0;
+}
+
+.mid {
+    display: flex;
+    align-items: center;
 }
 
 header {
     grid-area: header;
-    /* position: absolute; */
-    position: fixed;
-    background-color: #fff;
     width: 100%;
 }
+
 #hero {
     grid-area: hero;
+    height: 100vh;
+
 }
 main {
     grid-area: main;
+    /* margin-top: 6em; */
+}
+
+section {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
 footer {
     grid-area: footer;
@@ -46,7 +69,11 @@ footer {
 
 /* ----------------- NAV BAR ----------------- */
 #logo {
-    border-radius: 5px;
+    max-width:200px;
+    aspect-ratio: 4 /3;
+    object-fit: cover;
+    position:fixed;
+    border-radius: 4px;
 }
 
 /* clicking on 'MENU" trigers a hamburger motion. Menu shifts down to reveal "CLOSE".
@@ -70,6 +97,7 @@ A line above and below the nav toggle is styled here also. */
     transition: padding-top 600ms ease-in-out;
     transition: color 800ms ease-in;
 }
+
 
 #toggle.expand {
     padding-top: 1.5em; /* "menu" shifts down */
@@ -98,8 +126,8 @@ A line above and below the nav toggle is styled here also. */
 #close.reveal{
     z-index: 2;
     opacity: 1;
-    color: var(--light);
     background-color: var(--highlight);
+    color: var(--light);
 }
 #screen {
     position: fixed;
@@ -112,27 +140,35 @@ A line above and below the nav toggle is styled here also. */
 }
 
 #menu-container {
-    /* background-color: pink; */
     transform: translateY(-220%); /* shifts the menu downwards into view*/
     width: 100%;
 }
 
 #screen.reveal {
+    margin-top: 10em;
+    margin-right: 2em;
     height:25svh;
+}
+
+.nav-link {
+    font-size: 2rem;
+    list-style-type: none;
+    margin: 0.2em;
+
+}
+
+.nav-link:hover{
+    background-color: var(--highlight);
+    color: var(--light);
 }
 
 li {
     list-style-type: none;
-    margin: 0.2em;
     color: var(--dark);
-    width: 90%;
-    /* background-color: var(--highlight); */
+    width: 85%;
+    right: 0;
 }
 
-li:hover{
-    background-color: var(--highlight);
-    color: var(--light);
-}
 a {
     color: var(--dark);
     text-decoration: none;
@@ -158,11 +194,11 @@ a:hover {
 }
 
 
-/* -------------------- hero section -------------- */
+/* -------------------- HERO Animations -------------- */
 .portfolio-title {
     position: absolute;
-    margin-top: 5%;
-    left: 10%;
+    /* margin-top: 5%; */
+    /* left: 50%; */
     font-size: 1.2rem;
     opacity: 0;
     animation: display 1s 2s forwards;
@@ -174,11 +210,8 @@ a:hover {
     }
 }
 
-
 .animate-name{
-    /* background-color: aqua; */
-    height: 100svh;
-    /* padding-top: 7%; */
+    /* height: 100svh; */
     text-align: center;
     z-index: -10;
     display: flex;
@@ -198,7 +231,7 @@ a:hover {
 
 @keyframes fill {
     to {
-        color: rgba(0,0,0,1);
+        color: var(--dark);
     }
 }
 .overlay {
@@ -238,22 +271,23 @@ a:hover {
     }
 }
 .name{
-    font-family: 'Rubik Mono One', sans-serif;
+    font-family: 'MuseoModerno', sans-serif;
     color: rgba(0,0,0,0);
-    -webkit-text-stroke: 1px rgba(0,0,0,1);
-    text-stroke: 1px rgba(0,0,0,1);
+    -webkit-text-stroke: 1px var(--dark);
+    text-stroke: 1px var(--dark);
     font-size: 5rem;
     width: 100%;;
     z-index: -9;
 }
 
-
 #face {
-height:200px;
-width: 200px;
+max-height:200px;
+max-width: 200px;
 }
 
 /* ------------ general  ------------- */
+
+/* making each section fade in as they are scrolled on */
 .section-hidden {
     opacity: 0;
     transition: opacity 2s;
@@ -268,10 +302,10 @@ width: 200px;
     height: 30px;
     width: 100%;
     text-align: center;
-    padding-top: 5%;
     margin-bottom: 10px;
     font-family: var(--header-text);
-    font-size: 2rem;
+    font-size: 3rem;
+    padding: 1em;
 }
 
 
@@ -280,117 +314,241 @@ width: 200px;
 .projects-container {
     margin: 0 auto;
     display: grid;
-    grid-template-rows: 15em 15em;
+    grid-template-rows: auto;
     grid-template-columns: 2fr 2fr;
-    gap: 0.8em;
+    gap: 2em;
+    justify-content: center;
 
 }
 
+@media screen and  (min-width: 650px) {
+    .projects-container {
+        margin: 0 auto;
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 2fr 2fr 2fr;
+        gap: 2em;
+        justify-content: center;
+    }
+    .img-icon {
+        min-width: 10px;
+        max-width: 200px;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        border-radius: 3px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+}
+
 .img-icon {
-    max-width: 20em;
-    max-height: 15em;
-    min-width: 8em;
-    min-height: 5em;
+    min-width: 10px;
+    max-width: 280px;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
     border-radius: 3px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.img-icon:hover, .social-btn:hover {
+    box-shadow: rgba(204, 204, 251, 0.98) 0px 7px 29px 0px;
+
 }
 
 
 /* ------------ ABOUT section  ------------- */
-.about-container {
-    background-color: orange;
-}
-
-.skills-container{
-    display: grid;
-    grid-template-rows: 5em 5em;
-    grid-template-columns: 2fr 2fr;
-    gap: 0.8em;
-    background-color: yellow;
-}
-.skills li {
-    color: pink;
-}
-/* ------------ CONTACT section  ------------- */
-
-.form-container {
+#about {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* border: 1px red solid; */
-    padding: 1.6em 2em;
+    justify-content: center;
+}
+.about-container {
+    padding-bottom: 10px;
+    margin-bottom: 1em;
+    padding-top: 2em;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: "text text text text photo photo" 
+     "skills  skills skills skills skills skills";
+     gap: 2em;
+}
+
+.about-text {
+    grid-area: text;
+    padding: 0 1em 0 0.8em;
+    font-size: 1.3rem;
+}
+
+.skills-container{
+    grid-area: skills;
+    margin: 3em em 0 3em;
+    padding: 1em 0 2em 0;
+    display: grid;
+    grid-template-rows: 3em 3em;
+    grid-template-columns: 1fr 1fr 1fr;   
+}
+.photo {
+    grid-area: photo;
+    max-height: 250px;
+    aspect-ratio: 3/ 4;
+    object-fit: cover;
+    border-radius: 4px;
+    margin: 0 0 0 2em;
+
+}
+h4 {
+    padding-left: 40px;
+    margin-bottom: 1em;
+    font-weight: 900;
+    font-size: 1.3rem;
+}
+li {
+    font-size: 1.2rem;
+}
+/* ------------ CONTACT section  ------------- */
+
+.connect {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5rem;
+    width: 80%;
+}
+
+.coffee { 
+    margin-top: 2em;
     width: 50%;
+    padding:1em;
 }
-textarea::placeholder {
-    padding-top: 0.7rem;
+
+.coffee:hover {
+    background-color: var(--highlight);
+    color: var(--light);
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
-textarea::placeholder, #email::placeholder{
+
+#form-container {
+    display: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.6em 2em;
+    width: 80%;
+}
+
+.reveal-form {
+    display: block;
+}
+
+#full-name::placeholder, textarea::placeholder, #email::placeholder{
     text-align: center;
     font-family: var(--main-text);
 }
 .input{
-    width: 100%;
     margin-bottom: 10px;
     border-radius: 4px;
+    border: 1px solid var(--dark);
+    box-shadow: rgba(72, 72, 72, 0.1) 0px 4px 12px;
 }
 
-
-.msg {
-    height: 10rem;
+#full-name, #email, #message, #submit{
+    width: 100%;
+    padding-top: 0.7em;
+    padding-left: 0.3em;
+    padding-bottom: 0.7em;
 }
 
-.email {
-    height: 1.8rem;
+#submit {
+    width: 100%;
+
 }
-.submit {
-    padding: 0.35rem 0.7rem;
+.social-btn {
+    margin: 2em 0.5em 2em 0.5em;
+    font-size: 3rem;
+    border-radius: 50%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 0.7em;
 }
 
-.icon {
-    height: 2em;
-    width: 2em;
-}
-
-
-.email {
-    height: 1.2rem;
-    width: auto;
-}
-.copy {
-    filter: invert(100%);
-}
-
-.copy:hover{
+.social-btn:hover {
+    box-shadow: rgba(204, 204, 251, 0.98) 0px 10px 29px 0px;
+    background-color: var(--highlight);
     cursor: pointer;
+    color: var(--light);
 }
+/*------------------------------------- Footer -------------------------------------*/
 
-.copy.hide {
-    display: none;
-}
-
-.tick, .copy-message {
-    display: none;
-    color: var(--lowlight);
-    filter: invert(100%);
-}
-.tick.reveal, .copy-message.reveal {
-    display: inline;
-}
-/* ------------ footer  ------------- */
 footer{
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--light);
-    background-color: var(--dark);
-    font-size: 0.7rem;
-
+    background-color: var(--lowlight);
+    width: 100%;
+}
+/* ------ nav return always on show ------ */
+#return-btn {
+    padding: 0.6em 0.6em 0 0.6em;
+    font-size: 3rem;
+    position: absolute; 
+    position: fixed;
+    background-color: var(--lowlight);
+    bottom: 0.2em;
+    right: 1em;
+    border-radius: 15% 15% 0 0;
 }
 
-/* ------------ responsive  ------------- */
+#return-btn:hover {
+    background-color: var(--highlight);
+    cursor: pointer;
+    color: var(--light)
+}
+/* ------ footer items ------ */
+.icon {
+    font-size: 3rem;
+    padding: 0.3em;
+    border-radius: 50%;
+    margin: 0 1em 0 1em;
+    color: var(--light);
+}
+.icon:hover {
+    box-shadow: rgba(226, 226, 228, 0.98) 0px 10px 29px 0px;
+}
+
+#copy:hover{
+    cursor: pointer;
+}
+
+#my-email {
+    display:none;
+}
+
+#tick, #copy-message {
+    display: none;
+}
+/* for email copying */
+#copy.hide {
+    display: none;
+}
+
+#tick.unhide, #copy-message.unhide {
+    display: inline;
+    width: 10px;
+}
+#copy-message, #tick{
+    font-size: 0.8rem;
+    display: absolute;
+    color: var(--highlight);
+}
+/* ---------------------------------------------- responsive  ----------------------------------------------------- */
 @media (max-width: 850px) { 
-    .section-heading{
-        font-size: 1.6rem;
-    }   
     .animate-name span:nth-child(1){
         transform: translate(0%, 0%);
     }
@@ -409,19 +567,9 @@ footer{
         }
     }
 
-    .about-container  {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .about-container img{
+    /* .about-container img{
         display: none;
-    }
-    .about-text { 
-        width: 75%;
-    };
+    } */
 
     .form-container {
         width: 80%;

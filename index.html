@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gillian's Portfolio</title>
+    <title>Portfolio: Gillian Maronilla</title>
     <link rel="stylesheet" href="styles.css"></style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nobile&family=Rubik&family=Rubik+Mono+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@700&family=Recursive:wght@400;700;900&display=swap" rel="stylesheet">
+
     <script defer src="script.js"></script>
 </head>
 <body>
-    <header>
+    <header id="topper">
         <div>
-            <img src="./Assets/gm.svg">
+            <img id='logo'src="./Assets/gm.svg">
         </div>
         <div class="nav-container">
             <div id="toggle" class="toggle-menu">Menu</div>
@@ -26,10 +27,6 @@
                 <a href="#work"class="nav" ><li class="nav-link">Work</li></a>
                 <a href="#contact"class="nav" ><li class="nav-link">Connect</li></a>
                 <a href="#hero"class="nav" ><li class="nav-link">Home</li></a>
-                <!-- <li class="nav-link"><a href="#about"class="nav" > About me</a></li>
-                <li class="nav-link"><a href="#work" class="nav">Projects</a></li>
-                <li class="nav-link"><a href="#contact" class="nav">Connect</a></li>
-                <li class="nav-link"><a href="#welcome"class="nav" >Home</a></li> -->
                 </ul> 
             </div>
         </div>
@@ -38,7 +35,7 @@
        </div>
     </header>
 
-    <section id="hero" class="welcome animate-name section-hidden">
+    <section id="hero" class="welcome animate-name section-hidden mid">
         <span class="wrapper">
             <span class="item name">Gillian</span>
             <div class="overlay"></div>
@@ -52,21 +49,26 @@
         </span>
     </section>
 
-    <main>
+    <main class="'mid">
         <section id="work" class="section-hidden" >
             <h2 class="section-heading">WORK</h2>
             <div class="projects-container">
                 <div class="card">
-                    <a href="https://maronillag.github.io/Survey-Template/">
+                    <a href="https://github.com/MaronillaG/Survey-Template">
                         <img  src="./Assets/survey.png" alt="icon-project3" class="img-icon">
                     </a>
-                    <!-- <a href="https://github.com/MaronillaG/Survey-Template"><button class="btn">GitHub</button></a> -->
                 </div>
                 <div class="card">
-                    <a href="https://maronillag.github.io/RPSLizzardSpok/">
+                    <a href="https://github.com/MaronillaG/react-todo-app">
+                        <img  src="./Assets/todo.png" alt="icon-project3" class="img-icon">
+                    </a>
+                    <!-- <a href="https://maronillag.github.io/Survey-Template/"><button class="btn">GitHub</button></a> -->
+                </div>
+                <div class="card">
+                    <a href="https://github.com/MaronillaG/RPSLizzardSpok/">
                         <img  src="./Assets/rpsls.png" alt="icon-project3" class="img-icon">
                     </a>
-                    <!-- <a href="https://github.com/MaronillaG/RPSLizzardSpok/"><button class="btn">GitHub</button></a> -->
+                    <!-- <a href="https://maronillag.github.io/RPSLizzardSpok/"><button class="btn">GitHub</button></a> -->
                 </div>
                 
                 <div class="card">
@@ -90,30 +92,43 @@
             </div>
         </section>
 
-        <section id="about" class="section-hidden">
+        <section id="about" class="section-hidden mid">
             <h2 class="section-heading">Get To Know Me.</h2>
             <div class="about-container">
                 <p class="about-text"> I am a web developer with a strong  background in Accounting and Finance based in The Netherlands.<br>
                     <br> I entered the tech world out of curiosity and immediately developed a passion for coding. <br> 
-                    <br> Being able to create visually appealing and engaging user experiences truly has felt like gaining super powers. 
+                    <br> Being able to create visually appealing and engaging user experiences truly has felt like gaining super powers. <br>
+                    <br> When I'm not immersed in development mode, you can find me on my racing bike.
                 </p>
+                <img class='photo' src="./Assets/me.jpg">
                 <div class="skills-container">
+                    <div >
+                        <h4 class="skills">Languages <i class="fa-solid fa-language"></i></h4>
+
+                        <ul >
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    </div>
                     <div>
-                        <ul class="skills"> Languages
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                    </ul>
-                 </div>
-                    <div>
-                        <ul class="skills"> Tools
+                        <h4 class="skills">Tools <i class="fa-solid fa-toolbox"></i></h4>
+                        <ul >
                             <li>Git | Github</li>
                             <li>Figma | Canva </li>
                             <li>Terminal | VS Code</li>
+                            <li>Trello</li>
                         </ul>
                     </div>
-                    
-                    
+                    <div>
+                        <h4 class="skills">Skills <i class="fa-solid fa-user"></i></h4>
+                        <ul >
+                            <li>Communication</li>
+                            <li>Adaptability </li>
+                            <li>Quick Learner</li>
+                            <li>Team Player</li>
+                        </ul>
+                    </div>
                 </div>
             
             </div>
@@ -121,25 +136,26 @@
 
         <section id="contact" class="section-hidden">
             <h2 class="section-heading" id="contact-heading">Contact</h2>
-            <p>Happy that you’re here!<br>Let’s grab a coffee if you’re in Rotterdam - </p>
-            <div>
-                <p> coffee on me </p>
-                <i class="fas fa-coffee"></i>
+            <div class="connect">
+                <p>Happy that you're here!<br>Let's grab a coffee if you're in Rotterdam - </p>
+                <div class="coffee" id="coffee">
+                    <p> coffee on me </p>
+                    <i class="fas fa-coffee"></i>
+                </div>
             </div>
+            <form action="https://formspree.io/f/mlekqnre" method="POST" class="contact-form form-container reveal-form" id="form-container">
+                <input class="input full-name" id="full-name" type="name" name="full-name" required placeholder="What should I call you?"> 
+                <input class="input email" id="email" type="email" name="email" required placeholder="Your contact email address."> 
+                <textarea class="input msg" id="message" name="message" placeholder="Your message or project idea." rows="6" cols="30"></textarea>
+                <input id="submit" type="submit" value="Send" class="submit btn">
+            </form>
+
 
             <div class="socials">
-                <a href="https://github.com/MaronillaG"><i class="fa-brands fa-github"></i></a>
-                <a href="https://linkedin.com/in/gmaronilla"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/MaronillaG"><i class="fa-brands fa-github social-btn"></i></a>
+                <a href="https://linkedin.com/in/gmaronilla"><i class="fa-brands fa-linkedin-in social-btn"></i></a>
             </div>
 
-            <div class="form-container">
-                <form action="https://formspree.io/f/mlekqnre" method="POST" class="contact-form form-container">
-                    <input class="input full-name" id="full-name" type="name" name="full-name" required placeholder="What should I call you?"> 
-                    <input class="input email" id="email" type="email" name="email" required placeholder="Your contact email address."> 
-                    <textarea class="input msg" id="message" name="message" placeholder="Your message or project idea." rows="6" cols="30"></textarea>
-                    <input id="submit" type="submit" value="Send" class="submit btn">
-                </form>
-            </div>
         </section>
     </main>
 
@@ -152,17 +168,18 @@
 
         
         <div class="icons">
-            <a href="https://github.com/MaronillaG"><i class="fa-brands fa-github"></i></a>
-            <a href="https://linkedin.com/in/gmaronilla"><i class="fa-brands fa-linkedin-in" id="copy" class="icon email copy"></i></a>
-            <a href="https://linkedin.com/in/gmaronilla"><i class="fa fa-envelope" ></i></a>
-            <i class="fa-solid fa-check" id="copied" class="icon email tick"></i>
-                <span id="copy-message" class="copy-message">Email address copied successfully.</span>
+            <a href="https://github.com/MaronillaG"><i class="fa-brands fa-github icon"></i></a>
+            <a href="https://linkedin.com/in/gmaronilla"><i class="fa-brands fa-linkedin-in icon"></i></a>
+            <i class="fa fa-envelope icon"  id="copy" ></i>
+            <span id="my-email">gamaronilla@gmail.com</span>
+            <i class="fa-solid fa-check" id="tick"></i>
+            <span id="copy-message">Email address copied successfully.</span>
             <!-- <a href="https://www.codewars.com/users/MaronillaG/"> <img src="./Assets/codewars.png" class="icon codewars"></a> -->
             <!-- <a href="https://www.freecodecamp.org/MaronillaG"><i class="fa-brands fa-free-code-camp"></i></a> -->
         </div>
 
-        <div class="return">
-            <i class="fa-solid fa-angle-up"></i>
+        <div class="nav-return">
+            <a href="#hero"><i id="return-btn" class="fa-solid fa-angle-up"></i> </a>
         </div>
     </footer>
 </body>

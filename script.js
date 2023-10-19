@@ -3,6 +3,9 @@ const screen = document.querySelector('#screen');
 const menu = document.querySelector('#menu-container');
 const navLinks = document.querySelectorAll('.nav-link');
 const close = document.querySelector('#close');
+const coffee = document.querySelector('#coffee');
+const form = document.querySelector('#form-container');
+const revealForm = document.querySelector('.reveal-form')
 
 
 // Navigation Menu Toggle
@@ -51,7 +54,7 @@ hiddenSections.forEach((section) => observer.observe(section));
 // perform copy of email address on icon click
 const email = document.querySelector('#my-email');
 const copy = document.querySelector('#copy');
-const tick = document.querySelector('#copied');
+const tick = document.querySelector('#tick');
 const msg = document.querySelector('#copy-message');
 
 
@@ -67,6 +70,11 @@ async function copyToClipboard() {
 copy.addEventListener('click', function() {
     copyToClipboard();
     copy.classList.toggle('hide');
-    tick.classList.toggle('reveal');
-    msg.classList.toggle('reveal');
+    tick.classList.toggle('unhide');
+    msg.classList.toggle('unhide');
 });
+
+// reveal the contact form. 
+coffee.addEventListener('click', function() {
+    form.style.display === 'none' ? form.style.display = 'block' : form.style.display = 'none' 
+})
